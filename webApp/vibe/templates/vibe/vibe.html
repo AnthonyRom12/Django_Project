@@ -5,6 +5,10 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Vibe Home</h1>
+    {% for view in views %}
+        <h1>{{ view.Title }}</h1>
+        <p>By {{ view.Name }} on {{ view.Date_Posted }}</p>
+        <p>{{ view.Content }}</p>
+    {% endfor %}
 </body>
 </html>
