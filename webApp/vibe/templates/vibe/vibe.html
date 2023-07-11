@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
+{% extends "vibe/base.html" %}
+{% block content %}
     {% for view in views %}
         <h1>{{ view.Title }}</h1>
         <p>By {{ view.Name }} on {{ view.Date_Posted }}</p>
         <p>{{ view.Content }}</p>
     {% endfor %}
-</body>
-</html>
+{% endblock content %}

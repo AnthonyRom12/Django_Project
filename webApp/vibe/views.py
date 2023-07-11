@@ -1,4 +1,5 @@
 from django.shortcuts import render
+
 # from django.http import HttpResponse
 
 
@@ -16,6 +17,8 @@ views = [
         'Date_Posted': 'July 10, 2023'
     }
 ]
+
+
 # function for handle the traffic from the home page of our webApp
 # def home(request):
 #     return HttpResponse('<h1>Vibe Home Page</h1>')
@@ -29,4 +32,4 @@ def home(request):
 # def about(request):
 #     return HttpResponse('<h1>Vibe About</h1>')
 def about(request):
-    return render(request, 'vibe/about.html')
+    return render(request, 'vibe/about.html', {'title': 'About'})
