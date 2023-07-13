@@ -1,8 +1,9 @@
 {% extends "vibe/base.html" %}
+
 {% block content %}
     {% for view in views %}
         <h1>{{ view.Title }}</h1>
-        <p>By {{ view.Name }} on {{ view.Date_Posted }}</p>
-        <p>{{ view.Content }}</p>
+        <p>Content: {{ view.Content }}</p>
+        <p>Top Channels: {{ view.Top_Channels }}</p>
     {% endfor %}
 {% endblock content %}
