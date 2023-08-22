@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'vibe.apps.VibeConfig',
+    'users.apps.UsersConfig',
+    'content.apps.ContentConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -73,7 +74,7 @@ WSGI_APPLICATION = 'webApp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
+# TODO: PostgreSQL!!!
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

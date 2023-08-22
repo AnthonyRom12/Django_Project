@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class VibeConfig(AppConfig):
+class ContentConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'vibe'
+    name = 'content'
