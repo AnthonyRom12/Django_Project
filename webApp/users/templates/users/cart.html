@@ -1,0 +1,37 @@
+{% extends 'content/base.html' %}
+
+{% block content %}
+<h1>Your Cart</h1>
+
+    {% if cart_items %}
+        <table>
+            <thead>
+            <tr>
+                <th>Bot</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for item in cart_items %}
+                    <tr>
+                        <td>{{ item.bot.name }}</td>
+                        <td>$ {{ item.bot.price }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>$ {{ item.total_price }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total:</td>
+                    <td>$ {{ total_price }}</td>
+                </tr>
+            </tfoot>
+        </table>
+        <a href="{ url 'profile' %}" class="btn btn-primary">Proceed to Checkout</a>
+    {% else %}
+        <p>Your cart is empty</p>
+
+{% endblock %}

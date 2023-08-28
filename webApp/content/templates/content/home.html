@@ -1,0 +1,18 @@
+{% extends 'content/base.html' %}
+
+{% block content %}
+  <h1>Welcome to Bot Store</h1>
+
+  <h2>Available Bots</h2>
+  <ul>
+    {% for bot in bots %}
+      <li>
+        <h3>{{ bot.name }}</h3>
+        <p>{{ bot.description }}</p>
+        <p>Price: ${{ bot.price }}</p>
+        <a href="{% url 'add_to_cart' bot_id %}">Add to Cart</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
