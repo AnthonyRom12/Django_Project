@@ -1,18 +1,61 @@
-{% extends 'content/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <title>Available Bots</title>
+</head>
+<body>
 
-{% block content %}
-  <h1>Welcome to Bot Store</h1>
+<div class="header">
+    <div class="container">
+        <div class="header-line">
+            <div class="header-logo">
+                <img src="imeg/logo.png" alt="">
+        </div>
+        <div class="nav">
+            <a class ='nav-item' href="@">Главная</a>
+            <a class ='nav-item' href="@">Прайс</a>
+            <a class ='nav-item' href="@">О нас</a>
+            <a class ='nav-item' href="@">Заказать</a>
+        </div>
+    </div>    
+</div>
+<div class ="story">
+    <div>
+      <div class ="story" href="@">
+        <a class ='story' href="https://www.youtube.com/watch?v=5k-x7FUnDuE"></a>
+        <h2>Jane Doe</h2>
+        <span>bot</span>
+      </div>
+    </div>
+    <div>
+      <div class ="story" href="@">
+        <h2>Alex Smith</h2>
+        <a class="story" href="https://www.youtube.com/watch?v=2YCQrwTeet8"></a>
+        <span>bot</span>
+        
+      </div>
+    </div>
+    <div>
+      <div class ="story" href="@">
+        <h2>Emily New</h2>
+        <span>bot</span>
+      </div>
+    </div>
+    <div>
+      <div class ="story" href="@">
+        <h2>Lisa Boley</h2>
+        <span>bot</span>
+      </div>
+    </div>
+  </div>  
+</body>
+</html>
 
-  <h2>Available Bots</h2>
-  <ul>
-    {% for bot in bots %}
-      <li>
-        <h3>{{ bot.name }}</h3>
-        <p>{{ bot.description }}</p>
-        <p>Price: ${{ bot.price }}</p>
-        <a href="{% url 'add_to_cart' bot_id %}">Add to Cart</a>
-      </li>
-    {% endfor %}
-  </ul>
-{% endblock %}
+
+
 

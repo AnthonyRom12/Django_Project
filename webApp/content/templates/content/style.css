@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+.container {
+    margin: 0px 100px;
+}
+.header {
+    background-image: url(imeg/fon.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.header-line {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    margin-right: 25px;
+}
+.nav-item:hover{
+    text-shadow: 3px 3px #6b82e7;
+}
+
+
+  .story {
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    gap: 10px;
+  
+    > div {
+      flex: 0 0 120px;
+      border-radius: 0.5rem;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+      box-shadow: 1px 5px 15px #1e0e3e;
+      position: relative;
+      overflow: hidden;
+  
+      &:nth-of-type(1) {
+        background-image: url("imeg/image_bot.png");
+        background-repeat: no-repeat;
+        background-size:cover;
+        src:format('https://www.youtube.com/watch?v=5k-x7FUnDuE')
+        
+         
+      }
+      &:nth-of-type(2) {
+        background-image: url("imeg/image_bot.png");
+        background-repeat: no-repeat;
+    background-size:cover;
+      }
+      &:nth-of-type(3) {
+        background-image: url("imeg/image_bot.png");
+        background-repeat: no-repeat;
+        background-size:cover;
+          
+      }
+      &:nth-of-type(4) {
+        background-image: url("imeg/image_bot.png");
+        background-repeat: no-repeat;
+        background-size:cover;
+          
+      }
+  
+      .content {
+        font-size: 1.5rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        opacity: 0;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-end;
+        background: rgb(2, 2, 46);
+        background: linear-gradient(
+          0deg,
+          rgba(2, 2, 46, 0.6755077030812324) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: translatey(100%);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        visibility: hidden;
+  
+        span {
+          display: block;
+          margin-top: 5px;
+          font-size: 1.2rem;
+        }
+      }
+  
+      &:hover {
+        flex: 0 0 250px;
+        box-shadow: 1px 3px 15px #7645d8;
+        transform: translatey(-30px);
+      }
+  
+      &:hover .content {
+        opacity: 1;
+        transform: translatey(0%);
+        visibility: visible;
+      }
+    }
+  }
