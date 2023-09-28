@@ -1,15 +1,20 @@
 body {
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
-}
-.container {
-    margin: 0px 100px;
-}
-.header {
+    font-size: 100%;
+    min-height: 100%;
     background-image: url(imeg/fon.jpg);
-    height: 100vh;
     background-repeat: no-repeat;
     background-size:cover;
+}
+.container {
+    margin: 30px 0px;
+    background-image: url(imeg/article1.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.header {
+    
 }
 
 .header-line {
@@ -38,6 +43,7 @@ body {
     justify-content: center;
     height: 500px;
     gap: 10px;
+    margin-top: 4cm;
   
     > div {
       flex: 0 0 120px;
@@ -114,3 +120,25 @@ body {
       }
     }
   }
+.article-content{
+  
+  width: 50%;
+  height: 50%;
+  margin:  auto;
+  border: 5px solid rgba(80, 79, 79, 0.507) ;
+  margin-top: 5cm;
+  margin-bottom: 5cm;
+  background-image: url("imeg/article3.png") ;
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding: 10px 30px;
+
+  
+}
+.article-title{
+  color: #ffffff;
+
+}
+.article-text{
+  color: #ffffff;
+}
